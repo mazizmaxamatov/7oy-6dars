@@ -1,26 +1,333 @@
-@import "tailwindcss";
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
 
-:root {
-  --background: #ffffff;
-  --foreground: #171717;
+
+* {
+    margin: 0;
+    padding: 0;
+    text-decoration: none;
+    list-style: none;
+    box-sizing: border-box;
 }
 
-@theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
+nav {
+    max-width: 1200px;
+    margin: auto;
+    display: flex;
+    justify-content: space-between;
+    padding: 28px 15px;
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
+nav .logo h1 {
+    font-size: 14ps;
+    font-weight: 700;
+    color: green;
+
+}
+
+nav ul {
+    display: flex;
+    gap: 20px;
+}
+
+nav ul li a {
+    font-size: 16px;
+    font-weight: 400;
+    color: #000;
+}
+
+nav .nav_right {
+    display: flex;
+    gap: 25px;
+}
+
+nav .nav_right button {
+    padding: 6px 18px;
+    border-radius: 6px;
+    background-color: green;
+    color: white;
+}
+
+/*=====================================================header=====================================================*/
+
+
+header {
+    max-width: 1200px;
+    margin: auto;
+    background-color: gainsboro;
+    padding-top: 60px;
+}
+
+
+header .header_main .header_left p {
+    font-size: 14px;
+    font-weight: 600;
+    color: #000;
+    padding-left: 20px;
+
+}
+
+header .header_main .header_left h1 {
+    max-width: 716px;
+    font-size: 69px;
+    font-weight: 900;
+    margin-top: 5px;
+    padding-left: 20px;
+}
+
+header .header_main .header_left h1 span {
+    color: green;
+}
+
+header .header_main .header_left .sp p {
+    width: 530px;
+    font-size: 15px;
+    color: #666666;
+    margin-top: 20px;
+    padding-left: 20px;
+}
+
+header .header_main .header_left .btn {
+    padding-top: 30px;
+    padding-left: 20px;
+    padding-bottom: 30px;
+}
+
+header .header_main .header_left .btn button {
+    padding: 4px 14px;
+    border-radius: 4px;
+    border: 1px solid green;
+    background-color: green;
+    color: white;
+    font-weight: 500;
+}
+
+header .header_main{
+    display: flex;
+}
+
+header .header_main .header_right p{
+    width: 358px;
+    height: 358px;
+    background-image: url(./dashboard//assets//Screenshot_1.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-color: gainsboro;
+    margin-bottom: 10px;
+}
+
+/*====================================================main=========================================================*/
+
+
+main{
+    max-width: 1200px;
+    margin: auto;
+    margin-top: 40px;
+}
+
+main .main_nav ul{
+    display: flex;
+    gap: 35px;
+    margin-left: 80px;
+    margin-top: 50px;
+}
+
+main .main_nav ul li a{
+font-size: 16px;
+font-weight: 700;
+color: black;
+}
+
+main .main_nav ul li a:hover{
+    color: green;
+}
+
+main .main_main .card .bir{
+width: 250px;
+margin: auto;
+margin-top: 20px;
+border-radius: 6px ;
+background-color: #666666;
+text-align: center
+}
+
+main .main_main .card p{
+font-size: 18px;
+font-weight: 500;
+color: #000;
+padding-top: 10px;
+padding-bottom: 10px;
+color: #ffffff;
+}
+
+/*======================================================================footer===========================================================*/
+
+
+
+  .footer {
+    background: #f9f9f9;
+    color: #333;
   }
-}
-
-body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
-}
+  
+  .footer-top {
+    display: flex;
+    flex-wrap: wrap;
+    padding: 40px;
+    gap: 20px;
+    border-bottom: 1px solid #ddd;
+  }
+  
+  .footer-box {
+    flex: 1;
+    min-width: 200px;
+  }
+  
+  .footer-box img {
+    width: 40px;
+    margin-bottom: 10px;
+  }
+  
+  .footer-box h3 {
+    margin: 0 0 10px;
+    font-weight: bold;
+  }
+  
+  .footer-box p {
+    font-size: 14px;
+    color: #555;
+  }
+  
+  .divider {
+    width: 1px;
+    background: #ccc;
+    margin: 0 10px;
+  }
+  
+  .newsletter {
+    flex: 2;
+    min-width: 300px;
+  }
+  
+  .newsletter h4 {
+    font-weight: bold;
+    margin-bottom: 10px;
+  }
+  
+  .newsletter form {
+    display: flex;
+    margin-bottom: 10px;
+  }
+  
+  .newsletter input {
+    flex: 1;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-right: none;
+    border-radius: 5px 0 0 5px;
+  }
+  
+  .newsletter button {
+    background: #46a358;
+    color: #fff;
+    border: none;
+    padding: 0 20px;
+    border-radius: 0 5px 5px 0;
+    cursor: pointer;
+  }
+  
+  .newsletter p {
+    font-size: 14px;
+    color: #555;
+  }
+  
+  .footer-middle {
+    background: #e6f2e7;
+    display: flex;
+    justify-content: space-between;
+    padding: 20px 40px;
+    flex-wrap: wrap;
+  }
+  
+  .footer-middle .logo {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+  }
+  
+  .footer-middle .logo img {
+    width: 30px;
+  }
+  
+  .footer-middle .logo span {
+    color: #46a358;
+    font-weight: bold;
+    font-size: 18px;
+  }
+  
+  .footer-middle .contact {
+    display: flex;
+    gap: 30px;
+    flex-wrap: wrap;
+    font-size: 14px;
+    color: #333;
+    align-items: center;
+  }
+  
+  .footer-bottom {
+    padding: 40px;
+    background: #fff;
+    text-align: center;
+  }
+  
+  .footer-bottom .links {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    margin-bottom: 20px;
+  }
+  
+  .footer-bottom .column {
+    min-width: 200px;
+    text-align: left;
+  }
+  
+  .footer-bottom h4 {
+    font-weight: bold;
+    margin-bottom: 10px;
+  }
+  
+  .footer-bottom ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+  }
+  
+  .footer-bottom li {
+    margin-bottom: 6px;
+    font-size: 14px;
+    cursor: pointer;
+  }
+  
+  .social-icons span {
+    font-size: 20px;
+    background: #e6f2e7;
+    margin-right: 6px;
+    padding: 6px;
+    border-radius: 4px;
+    display: inline-block;
+    cursor: pointer;
+  }
+  
+  .payment-icons img {
+    width: 40px;
+    margin-right: 10px;
+    margin-top: 10px;
+  }
+  
+  .footer-bottom p {
+    font-size: 14px;
+    color: #555;
+    margin-top: 20px;
+  }
+  
